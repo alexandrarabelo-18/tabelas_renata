@@ -3,69 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Rotina Semanal</title>
-
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f5efff;
-            text-align: center;
             padding: 40px 20px;
+            text-align: center;
         }
 
         h1 {
             color: #7041a6;
-            font-size: 32px;
-            margin-bottom: 8px;
         }
 
-        p {
-            color: #8b70a8;
-            font-size: 16px;
-        }
-
-        table {
-            width: 95%;
-            margin: 35px auto;
+        table, th, td {
+            border: 1px solid black;
             border-collapse: collapse;
-            background-color: #ffffff;
+            padding: 2%;
+            text-align: center;
+        }
+
+        .tabela2 {
+            width: 95%;
+            margin: 100px auto 35px auto;
+            border-collapse: collapse;
+            background-color: white;
             box-shadow: 0 4px 15px rgba(112, 65, 166, 0.15);
         }
 
-        th, td {
+        .tabela2 th,
+        .tabela2 td {
             border: 2px solid #e5d6f5;
             padding: 20px 12px;
             text-align: center;
             font-size: 15px;
         }
 
-        th {
+        .tabela2 th {
             background-color: #b99add;
             color: white;
         }
 
-        tr:first-child th {
+        .tabela2 tr:first-child th {
             background-color: #8054ad;
             font-size: 20px;
             letter-spacing: 2px;
             padding: 22px;
         }
 
-        td {
+        .tabela2 td {
             color: #654b7c;
             background-color: #fcfaff;
         }
 
-        tr:nth-child(even) td {
+        .tabela2 tr:nth-child(even) td {
             background-color: #f2eafb;
         }
 
-        tr:hover td {
+        .tabela2 tr:hover td {
             background-color: #e5d4f7;
         }
 
+        .tabela2 tr:not(:first-child) th:first-child {
+            text-align: left;
+            padding-left: 20px;
+        }
+
         footer {
-            margin-top: 25px;
+            margin-top: 35px;
             color: #8054ad;
             font-weight: bold;
         }
@@ -74,10 +78,40 @@
 
 <body>
 
+    <table>
+        <caption>Trajetória Acadêmica e Profissional</caption>
+
+        <tr>
+            <th rowspan="2" width="30%">Estudante</th>
+            <th colspan="2">Formação</th>
+            <th rowspan="2">Ano de conclusão</th>
+        </tr>
+
+        <tr>
+            <th>Graduação</th>
+            <th>Pós Graduação</th>
+        </tr>
+
+        <tr>
+            <th>José</th>
+            <td>Ciências da Computação</td>
+            <td>Inteligência Artificial</td>
+            <td>2023</td>
+        </tr>
+
+        <tr>
+            <th>Ana</th>
+            <td>Engenharia de Software</td>
+            <td>Gestão de Projetos</td>
+            <td>2022</td>
+        </tr>
+    </table>
+
     <h1>Minha Rotina Semanal</h1>
     <p>Organização dos meus horários durante a semana</p>
 
-    <table>
+    <table class="tabela2">
+
         <tr>
             <th colspan="8">MEUS HORÁRIOS</th>
         </tr>
@@ -147,7 +181,9 @@
             <td>Descanso</td>
             <td>Descanso</td>
         </tr>
+
     </table>
+
 
 </body>
 </html>
